@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💱 Currency Converter - Mehrsprachig</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+            <button class="lang-btn" data-lang="it">🇮🇹 Italiano</button>
+            <button class="lang-btn" data-lang="tr">🇹🇷 Türkçe</button>
+            <button class="lang-btn" data-lang="ar">🇸🇦 العربية</button>
+        </div>
+
+        <h1>
+            <span>💱</span>
+            <span class="i18n" data-key="title">Currency Converter</span>
+            <span>🌍</span>
+        </h1>
+
+        <!-- Von Währung -->
+        <div class="currency-container">
+            <div class="custom-select-wrapper">
+                <div class="custom-select" id="custom-select-from">
+                    <div class="select-selected" id="selected-from">
+                        <img src="https://flagcdn.com/us.svg" alt="USD Flagge">
+                        <span>USD - US-Dollar</span>
+                    </div>
+                    <div class="select-items" id="dropdown-from"></div>
+                </div>
+            </div>
+            <input type="number" id="worth-first" placeholder="Betrag" value="1" min="0" step="any">
+        </div>
+
+        <!-- Nach Währung -->
+        <div class="currency-container">
+            <div class="custom-select-wrapper">
+                <div class="custom-select" id="custom-select-to">
+                    <div class="select-selected" id="selected-to">
+                        <img src="https://flagcdn.com/eu.svg" alt="EUR Flagge">
+                        <span>EUR - Euro</span>
+                    </div>
+                    <div class="select-items" id="dropdown-to"></div>
+                </div>
+            </div>
+            <input type="number" id="worth-second" placeholder="0.00" readonly>
+        </div>
+
+        <div class="exchange-rate" id="exchange-rate">
+            1 USD = 0.93 EUR
+        </div>
+        <div class="status">
+            <span class="i18n" data-key="status">Live-Wechselkurse | Echte Flaggen | Sofortige Umrechnung</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
