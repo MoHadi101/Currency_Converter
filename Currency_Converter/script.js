@@ -240,7 +240,7 @@ async function updateRate() {
     exchangeRateEl.innerHTML = `🔄 ${t.loading}`;
 
     try {
-        const response = await fetch(`https://v6.exchangerate-api.com/v6/fa8c519cea7f485a768f4d23/latest/${fromCurrency}`);
+        const response = await fetch(`https://v6.exchangerate-api.com/v6/Private_api/latest/${fromCurrency}`);
         const data = await response.json();
         
         if (data.result === "success") {
